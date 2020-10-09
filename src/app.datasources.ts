@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 const { RESTDataSource } = require('apollo-datasource-rest');
 
 @Injectable()
-export class JokeNorris extends RESTDataSource {
+class JokeNorris extends RESTDataSource {
   constructor() {
     super();
     this.baseURL = 'https://api.chucknorris.io/jokes';
@@ -18,3 +18,5 @@ export class JokeNorris extends RESTDataSource {
     return response;
   }
 }
+
+module.exports = { JokeNorris };
