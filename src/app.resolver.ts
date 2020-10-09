@@ -9,7 +9,7 @@ export class JokeResolver {
 
   @Query('getRandomJoke')
   async getRandomJoke() {
-    return await this.jokeNorris.getRandomJoke();
+    return await this.jokeNorris.getRandomJoke({ category: 'animal' });
   }
 
   @Query('getCategories')

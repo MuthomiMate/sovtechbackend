@@ -1,7 +1,5 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
 import { GraphQLModule } from '@nestjs/graphql';
-import { AppService } from './app.service';
 import { JokeResolver } from './app.resolver';
 import { JokeNorris } from './app.datasources';
 
@@ -12,7 +10,6 @@ import { JokeNorris } from './app.datasources';
       playground: true,
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService, JokeNorris, JokeResolver],
+  providers: [JokeNorris, JokeResolver],
 })
 export class AppModule {}
