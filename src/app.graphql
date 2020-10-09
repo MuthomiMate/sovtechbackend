@@ -1,0 +1,12 @@
+type Joke  {
+  icon_url: String!
+  id: String!
+  url: String?
+  value: Sring!
+}
+
+
+type Query {
+  getAllCategories: [String!]!
+  randomJoke(category: String!): Joke
+}
